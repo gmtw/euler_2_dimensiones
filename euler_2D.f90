@@ -136,12 +136,12 @@
             u(1,i,j)=rhoin
             u(2,i,j)=rhoin*vxin
             u(3,i,j)=rhoin*vyin
-            u(4,i,j)=pin/(gamma-1.) + 0.5*u(1,i,j)*u(2,i,j)*u(2,i,j) + 0.5*u(1,i,j)*u(3,i,j)*u(3,i,j)
+            u(4,i,j)=pin/(gamma-1.) + 0.5*u(2,i,j)*u(2,i,j)/u(1,i,j) + 0.5/u(1,i,j)*u(3,i,j)*u(3,i,j)
           else
             u(1,i,j)=rhoout
             u(2,i,j)=rhoout*vxout
             u(3,i,j)=rhoout*vyout
-            u(4,i,j)=pout/(gamma-1.) + 0.5*u(1,i,j)*u(2,i,j)*u(2,i,j) + 0.5*u(1,i,j)*u(3,i,j)*u(3,i,j)
+            u(4,i,j)=pout/(gamma-1.) + 0.5/u(1,i,j)*u(2,i,j)*u(2,i,j) + 0.5/u(1,i,j)*u(3,i,j)*u(3,i,j)
 
           end if
 

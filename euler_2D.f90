@@ -1,7 +1,7 @@
 !=======================================================================
 !   This program solves the Euler equations (2D) with the Lax Method
 !=======================================================================
-
+!un cambio diferente en el programa
 !=======================================================================
 !   This module contains global variables
       module globals

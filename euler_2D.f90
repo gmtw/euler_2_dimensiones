@@ -2,6 +2,8 @@
 !   This program solves the Euler equations (2D) with the Lax Method
 !=======================================================================
 !un cambio diferente en el programa
+!otro cambio
+!mas cambios
 !=======================================================================
 !   This module contains global variables
       module globals
@@ -30,8 +32,8 @@
       real, parameter :: ymax=1., dy=ymax/float(ny)
       real, parameter :: gamma=1.6666666
 
-      real, parameter :: tmax= 30.0        ! maximum integration time
-      real, parameter :: dtprint=1.0       ! interval between outputs
+      real, parameter :: tmax= 1.0        ! maximum integration time
+      real, parameter :: dtprint=0.01       ! interval between outputs
 
       real, parameter :: rhoin = 10.0
       real, parameter :: rhoout = 0.001
@@ -51,7 +53,7 @@
 ! 0.0 = open boundary conditions
 ! 1.0 = Jet injection
 !--------------------------------------
-      real, parameter :: bound=10.0
+      real, parameter :: bound=0.0
 
 !------------------------------------------------------------------------------
 !   This is a vector that contains u(x,y) (do not touch)
@@ -132,7 +134,7 @@
           y=float(j)*dy          ! obtain the position $y_j$
           rad=sqrt((x-xc)**2+(y-yc)**2)
 
-          if (rad < 0.0) then
+          if (rad < 0.3) then
             u(1,i,j)=rhoin
             u(2,i,j)=rhoin*vxin
             u(3,i,j)=rhoin*vyin
